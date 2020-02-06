@@ -16,14 +16,15 @@ def main():
     clips = []
     for i, item in enumerate(file_list_sorted):
         if i%2==0:
-            clip = ImageClip(item).set_pos((100,0))
+            clip = ImageClip(item).set_pos("left","top")
+            clip = resize(clip, width=640,height=480)
         else:   
-            clip = ImageClip(item).set_pos((0,110))
+            clip = ImageClip(item).set_pos("right","bottom")
             clip = resize(clip, width=400,height=300)
-        clip = clip.set_duration(1)
+        clip = clip.set_duration(1).set_start(i)
         clips.append(clip) 
 
-    concat_clip = concatenate_videoclips(clips, method="compose")
+    concat_clip = CompositeVideoClip(clips,  size = (1280,720))
     concat_clip.write_videofile("test.mp4", fps=fps)
 
 if __name__ == "__main__":

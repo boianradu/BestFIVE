@@ -10,6 +10,7 @@ assets/*
 # Distribution / packaging
 .Python
 build/
+*.mp4
 develop-eggs/
 dist/
 downloads/
