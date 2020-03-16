@@ -1,5 +1,5 @@
 from video_manager import *
-import os 
+import os
 from moviepy.editor import *
 from moviepy.video.fx.resize import resize
 
@@ -7,9 +7,10 @@ from moviepy.video.fx.resize import resize
 def main():
     directory_path = "D:\\Work\\BestFIVE\\assets\\*jpg"
     videoManager = VideoManager()
-    videoManager.getVideoFromImages(directory_path)
-    videoManager.writeFinalVideo("out.mp4")
+    videoManager.generate_video(directory_path)
+    videoManager.write_final_video("out.mp4")
 
 
 if __name__ == "__main__":
     main()
+

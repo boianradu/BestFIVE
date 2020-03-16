@@ -15,10 +15,9 @@ class VideoManager:
         self.clip = None
         self.mediaProcessor = MediaProcessor()
 
-    def getVideoFromImages(self, directory_path):
-        self.clip = self.mediaProcessor.generateVideoFromDirectoryOfImages(
-            directory_path
-        )
+    def generate_video(self, directory_path):
+        self.mediaProcessor.generate_video_images_directory(directory_path)
+        self.mediaProcessor.add_audio_to_video("D:\\Work\\BestFIVE\\assets\\deli.mp3")
 
-    def writeFinalVideo(self, output_file_path):
-        self.clip.write_videofile(output_file_path, fps=FPS)
+    def write_final_video(self, output_file_path):
+        self.mediaProcessor.write_final_clip(output_file_path, FPS)
