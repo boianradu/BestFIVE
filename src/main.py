@@ -5,7 +5,7 @@ from moviepy.video.fx.resize import resize
 
 
 def main():
-    directory_path = "D:\\Work\\BestFIVE\\assets\\*jpg"
+    directory_path = "*jpg"
     videoManager = VideoManager()
     videoManager.generate_video(directory_path)
     videoManager.write_final_video("out.mp4")

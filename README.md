@@ -1,5 +1,10 @@
-#BestFive
+# BestFive
 
-BestFive is a video generator of best-of-five things found on specific resources like reddit, imgur, youtube, twitter.
+BestFive is a video generator of best-of-five things found on specific resources like:
+* reddit
+* imgur
+* youtube 
+* twitter.
 
-_*by *Radu Boian**_
+
+<sub><sup>_*by *Radu Boian**_<sup><sub>
